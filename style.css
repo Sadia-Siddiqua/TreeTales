@@ -1,0 +1,828 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Sacramento&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode styles */
+body.light-mode {
+    background-color: #f0f0f0; /* Light background */
+    color: #333; /* Dark text for visibility */
+}
+
+header.light-mode,
+nav.light-mode ul li a,
+.intro.light-mode h2,
+.intro.light-mode p,
+.section-card.light-mode h3,
+.section-card.light-mode p,
+footer.light-mode {
+    color: #333; /* Dark text for visibility in light mode */
+}
+
+.section-card.light-mode {
+    background-color: #fff; /* White background for section cards in light mode */
+}
+
+.section-card.light-mode a {
+    background-color: #6A994E;
+    color: white;
+}
+
+.section-card.light-mode a:hover {
+    background-color: #4CAF50;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #2b2b2b; /* Dark background */
+    color: white; /* Light text for visibility */
+}
+
+/* Ensure white text in dark mode */
+header.dark-mode,
+nav.dark-mode ul li a,
+.intro.dark-mode h2,
+.intro.dark-mode p,
+.section-card.dark-mode h3,
+.section-card.dark-mode p,
+footer.dark-mode {
+    color: white !important; /* Ensure text is white in dark mode */
+}
+
+/* Force background color change in dark mode for section cards */
+body.dark-mode .section-card {
+    background-color: #444 !important; /* Darker background for section cards in dark mode */
+    color: white !important; /* White text inside section cards */
+    border: 1px solid #555; /* Add subtle border to make cards stand out */
+}
+
+body.dark-mode .section-card a {
+    background-color: #6A994E !important;
+    color: white !important;
+}
+
+body.dark-mode .section-card a:hover {
+    background-color: #4CAF50 !important;
+}
+
+/* Dark mode for new sections */
+body.dark-mode .about-trees,
+body.dark-mode .tree-facts,
+body.dark-mode .subscribe,
+body.dark-mode .blog-section {
+    background-color: #333 !important; /* Darker background for these sections */
+    color: white !important; /* Ensure white text for readability */
+}
+
+body.dark-mode .fact-box,
+body.dark-mode .blog-post {
+    background-color: #444 !important; /* Darker background for fact boxes and blog posts */
+    color: white !important;
+    border: 1px solid #555;
+}
+
+/* Header styles */
+header {
+    background-color: #6A994E;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.header-content h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 3em;
+    margin: 0;
+}
+
+header button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #F48C06;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+header button:hover {
+    background-color: #FF6F00;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #333;
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white; /* White text for navigation links in both modes */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #F48C06;
+}
+
+/* Intro section styles */
+.intro {
+    text-align: center;
+    padding: 40px 20px;
+    background: url('https://images.unsplash.com/photo-1571225423063-dfccfebd4954?fit=crop&w=1350&q=80') no-repeat center;
+    background-size: cover;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Featured sections */
+.featured-sections {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+/* Section cards */
+.section-card {
+    background-color: #fff; /* Default light mode background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.section-card p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.section-card a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6A994E;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.section-card a:hover {
+    background-color: #4CAF50;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer styles */
+footer {
+    background-color: #6A994E;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1em;
+}
+
+/* Button bounce animation */
+@keyframes bounceEffect {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+button.bounce {
+    animation: bounceEffect 0.3s ease-in-out;
+}
+
+/* Hover effect for section cards */
+.section-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.section-card.hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Entrance animation (applied in JS) */
+header, .section-card {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+/* Fun bounce animations for sections */
+.about-trees, .tree-facts, .subscribe, .blog-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.about-trees.visible, .tree-facts.visible, .subscribe.visible, .blog-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add bounce effect */
+.about-trees.visible {
+    animation: bounceIn 0.8s ease-in-out;
+}
+
+@keyframes bounceIn {
+    0%, 100% {
+        transform: scale(0.98);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* Hover effect for buttons */
+button, .section-card a {
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+button.hovered, .section-card a.hovered {
+    transform: scale(1.05);
+}
+
+/* Subscribe form styling */
+.subscribe form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.subscribe input {
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 1px solid #6A994E;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+.subscribe input:focus {
+    box-shadow: 0 0 10px rgba(106, 153, 78, 0.4);
+}
+
+.subscribe button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background-color: #6A994E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.subscribe button:hover {
+    background-color: #4CAF50;
+}
+
+/* Blog post hover effect */
+.blog-post {
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    width: 60%;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* General button styling */
+button, .section-card a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* Fix for About Trees and other sections */
+.about-trees, .tree-facts, .subscribe, .blog-section {
+    padding: 40px;
+    background-color: #f8f8f8; /* Light background for sections in light mode */
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Ensure the background and text are correct in dark mode */
+body.dark-mode .about-trees, 
+body.dark-mode .tree-facts, 
+body.dark-mode .subscribe, 
+body.dark-mode .blog-section {
+    background-color: #333 !important; /* Dark background for sections in dark mode */
+    color: white !important; /* Ensure text is visible */
+}
+
+body.dark-mode .fact-box, 
+body.dark-mode .blog-post {
+    background-color: #444 !important; /* Dark background for fact boxes and blog posts */
+    color: white !important;
+    border: 1px solid #555; /* Ensure a subtle border for visibility */
+}
+
+/* Add padding for "Did You Know?" and "Join Us" sections */
+.tree-facts h2, .subscribe h2, .blog-section h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.tree-facts p, .subscribe p, .blog-section p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+/* Subscribe section input and button styling */
+.subscribe form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.subscribe input {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #6A994E;
+    margin-right: 10px;
+}
+
+.subscribe button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #6A994E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe button:hover {
+    background-color: #4CAF50;
+}
+
+/* Blog Section styling */
+.blog-section {
+    padding: 40px;
+    background-color: #f4f4f4; /* Light background for blog section in light mode */
+    text-align: center;
+}
+
+.blog-post {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 60%;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.blog-post a {
+    color: #6A994E;
+    text-decoration: none;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+/* Dark mode for blog posts */
+body.dark-mode .blog-post {
+    background-color: #444 !important;
+    color: white !important;
+}
+
+/* Image Gallery */
+.image-gallery {
+    padding: 40px;
+    background-color: #e8f5e9; /* Light mode background */
+    text-align: center;
+    color: #333; /* Light mode text color */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.image-gallery h2 {
+    font-size: 2.5em;
+    color: #333; /* Light mode text color */
+    margin-bottom: 20px;
+    opacity: 0; /* Start hidden for animation */
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Gallery container to align images */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Gallery images styling */
+.gallery-container img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+/* Hover effect for gallery images */
+.gallery-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Dark Mode for Image Gallery */
+body.dark-mode .image-gallery {
+    background-color: #333 !important; /* Dark mode background */
+    color: white !important; /* White text in dark mode */
+}
+
+body.dark-mode .image-gallery h2 {
+    color: white !important; /* Ensure white text for gallery title in dark mode */
+}
+
+/* Ensure visibility for gallery images */
+body.dark-mode .gallery-container img {
+    border: 2px solid #555; /* Add a border for better contrast in dark mode */
+}
+
+/* Animation for gallery section title */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 40px;
+    background-color: #f8f8f8;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .contact-form {
+    background-color: #444; /* Dark mode background */
+    color: white; /* Dark mode text */
+}
+
+.contact-form h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #6A994E;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #6A994E;
+    transition: box-shadow 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    box-shadow: 0 0 10px rgba(106, 153, 78, 0.4);
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background-color: #6A994E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #4CAF50;
+    transform: scale(1.05);
+}
+/* FAQ Section */
+.faq-section {
+    padding: 40px;
+    background-color: #f4f4f4;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .faq-section {
+    background-color: #333; /* Dark mode background */
+    color: white; /* Dark mode text */
+}
+
+.faq-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #6A994E;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+body.dark-mode .faq {
+    background-color: #444; /* Dark mode background for FAQ */
+    color: white; /* Dark mode text */
+    border: 1px solid #555;
+}
+
+.faq h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+body.dark-mode .faq h3 {
+    color: white; /* Dark mode text */
+}
+
+.faq p {
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+.faq:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+/* Event Section */
+.event-section {
+    padding: 40px;
+    background-color: #e8f5e9;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .event-section {
+    background-color: #333;
+    color: white;
+}
+
+.event-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #6A994E;
+}
+
+.event {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode .event {
+    background-color: #444; /* Dark mode background */
+    color: white;
+    border: 1px solid #555;
+}
+
+.event:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.event h3 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+body.dark-mode .event h3 {
+    color: white;
+}
+
+.event p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+body.dark-mode .event p {
+    color: #ccc;
+}
+/* General responsive adjustments */
+body {
+    font-size: 16px;
+}
+
+header {
+    padding: 20px;
+}
+
+nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+main {
+    padding: 10px;
+}
+
+/* For small screens (mobile devices) */
+@media only screen and (max-width: 768px) {
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Responsive layout for cards */
+    .featured-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-card {
+        width: 100%;
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .intro h2 {
+        font-size: 2em;
+    }
+
+    .intro p {
+        font-size: 1.1em;
+    }
+
+    .about-trees h2, .tree-facts h2, .subscribe h2, .blog-section h2 {
+        font-size: 2em;
+    }
+
+    /* Responsive layout for Image Gallery */
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-container img {
+        width: 90%;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+
+    /* Responsive layout for the Contact Form */
+    .contact-form form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 90%;
+        max-width: 500px;
+        margin-bottom: 10px;
+    }
+
+    /* Responsive layout for FAQ Section */
+    .faq-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .faq {
+        margin-bottom: 20px;
+    }
+
+    /* Responsive layout for Event Section */
+    .event-section .event {
+        margin-bottom: 20px;
+    }
+}
+
+/* For very small screens (less than 480px wide) */
+@media only screen and (max-width: 480px) {
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .intro h2 {
+        font-size: 1.8em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+
+    .about-trees h2, .tree-facts h2, .subscribe h2, .blog-section h2 {
+        font-size: 1.8em;
+    }
+
+    /* Smaller font for event titles */
+    .event-section h2 {
+        font-size: 1.5em;
+    }
+}

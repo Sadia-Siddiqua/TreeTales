@@ -1,0 +1,32 @@
+/* TreeCraft specific styles */
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #E1F5FE;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #0288D1;
+    color: white;
+}
+
+h2 {
+    color: #0288D1;
+}
+
+section {
+    background-color: #B3E5FC;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+body.light-mode {
+    background-color: #E1F5FE;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: #455A64;
+    color: white;
+}

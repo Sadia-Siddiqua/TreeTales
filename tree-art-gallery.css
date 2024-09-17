@@ -1,0 +1,32 @@
+/* Tree Art Gallery specific styles */
+body {
+    font-family: 'Lucida Sans', sans-serif;
+    background-color: #FFEBEE;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #D81B60;
+    color: white;
+}
+
+h2 {
+    color: #D81B60;
+}
+
+section {
+    background-color: #FFE4E1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+body.light-mode {
+    background-color: #FFEBEE;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: #880E4F;
+    color: white;
+}

@@ -1,0 +1,32 @@
+/* Adopt a Tree specific styles */
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #FAF3E0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #F48C06;
+    color: white;
+}
+
+h2 {
+    color: #F48C06;
+}
+
+section {
+    background-color: #FFF4E0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+body.light-mode {
+    background-color: #FAF3E0;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: #3D3B30;
+    color: white;
+}

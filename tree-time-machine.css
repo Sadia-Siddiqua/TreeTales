@@ -1,0 +1,32 @@
+/* Tree Time Machine specific styles */
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #EAE7DC;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #8E7CC3;
+    color: white;
+}
+
+h2 {
+    color: #8E7CC3;
+}
+
+section {
+    background-color: #F1F1F1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+body.light-mode {
+    background-color: #EAE7DC;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: #292929;
+    color: white;
+}

@@ -1,0 +1,32 @@
+/* Whispering Leaves specific styles */
+body {
+    font-family: 'Garamond', serif;
+    background-color: #FDF2E9;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #D35400;
+    color: white;
+}
+
+h2 {
+    color: #D35400;
+}
+
+section {
+    background-color: #FBEEE6;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+body.light-mode {
+    background-color: #FDF2E9;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: #4E342E;
+    color: white;
+}
